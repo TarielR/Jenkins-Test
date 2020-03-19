@@ -28,12 +28,12 @@ public class DummyController {
         return "Some string";
     }
 
-    @GetMapping("item")
+    @GetMapping("/item")
     public Item getItem() {
         return service.getItem();
     }
 
-    @GetMapping("response")
+    @GetMapping("/response")
     public ResponseEntity<Item> getResponse() {
         return new ResponseEntity<>(service.getItem(), HttpStatus.OK);
     }
